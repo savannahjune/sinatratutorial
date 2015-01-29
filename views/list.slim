@@ -5,6 +5,6 @@ li.list
   ul.tasks
     - list.tasks.each do |task|
       == slim :task, locals: { task: task }
-  form.destroy action="/list/#{list.id}" method="POST"
+  form.destroy action="/list/#{list.id}" method="POST" title="Delete this List"
     input type="hidden" name="_method" value="DELETE"
     input type="submit" value="&times;"
